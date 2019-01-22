@@ -54,11 +54,13 @@ class HeaderBertasbih extends Component {
               <Collapse isOpen={this.state.isOpen} navbar>
                 <Nav className="ml-auto" navbar>
                   <NavItem>
-                    <NavLink href="/register">Register</NavLink>
+                    <Link to="/register">
+                        <NavLink>Register</NavLink>
+                    </Link>
                   </NavItem>
                   <NavItem>
                     <Link to="/login">
-                    <NavLink href="">Login</NavLink> 
+                        <NavLink>Login</NavLink> 
                     </Link>
                   </NavItem>
                 </Nav>
