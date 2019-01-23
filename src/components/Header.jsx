@@ -14,9 +14,6 @@ import {
 import { Link } from 'react-router-dom';
 import { connect } from "react-redux";
 
-
-const cookies = new Cookies();
-
 class HeaderBertasbih extends Component {
     constructor(props) {
         super(props);
@@ -31,19 +28,6 @@ class HeaderBertasbih extends Component {
           isOpen: !this.state.isOpen
         });
       }
-
-      componentDidMount() {
-        const username = cookies.get('dataUser');
-        if(username !== undefined) {
-          this.props.keepLogin(username);
-        }
-      }
-
-      onLogoutSelect = () => {
-        this.props.onUserLogOut();
-        cookies.remove('dataUser');
-      }
-
     render() { 
         if (this.props.username === "") {
         return(
